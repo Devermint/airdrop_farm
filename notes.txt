@@ -1,0 +1,22 @@
+withdraw only boosted tokens with event requires tracking the
++
+
+2) Function to view locked tokens +
+
+3) Lock untill bool -> mainnet is live but calculating interval how long it took ??
+
+4) Withdrawable staking should be able to withdraw locked shouldnt until mainnet is live
+
+5) Additional for each user multiplier multiplier X - socials y - kyc
+
+6) Total locked tokens
+
+7) Total tokens locked per wallet
+
+8) Total boosted tokens
+
+9) Total boosted tokens per wallet
+
+10) Number of airdrop credits distributed
+
+11)
