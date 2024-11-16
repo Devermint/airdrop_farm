@@ -12,7 +12,7 @@ contract AirdropFarmFactory is Ownable {
 
     event FarmCreated(address indexed farmAddress, string farmName);
 
-    constructor() {
+    constructor() Ownable(msg.sender) {
 
     }
 
@@ -24,15 +24,12 @@ contract AirdropFarmFactory is Ownable {
         uint256 _timeLockedMultiplier,
         uint256 _donationMultiplier
     ) external onlyOwner returns (address) {
-        AirdropFarmingPool farm = new AirdropFarmingPool();
-        farm.initialize(
-            _acceptedToken,
+        AirdropFarmingPool farm = new AirdropFarmingPool(_acceptedToken,
             _acceptedLP,
             _baseRate,
             _timeLockedMultiplier,
             _donationMultiplier,
-            msg.sender
-        );
+            msg.sender);
 
         farms.push(address(farm));
         emit FarmCreated(address(farm), _farmName);
